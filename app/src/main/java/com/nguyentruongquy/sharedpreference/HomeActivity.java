@@ -38,9 +38,10 @@ public class HomeActivity extends AppCompatActivity {
         // Xóa thông tin đăng nhập
         new PrefManager(this).saveLoginDetails("", "");
 
-        // Quay lại màn hình đăng nhập
+        // Quay lại màn hình đăng nhập và xóa stack Activity
         Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-        finish();
+        finish(); // Kết thúc HomeActivity
     }
 }

@@ -12,15 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SharedPreference"
         tools:targetApi="31">
+
+        <!-- MainActivity là màn hình đăng nhập -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- HomeActivity là màn hình sau khi đăng nhập thành công -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
